@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjhatax76rj7e"]
+
+[ext_resource type="Texture2D" uid="uid://ps1rnpa6iskf" path="res://assets/tilesets/forest/RocksnStumps.png" id="1_tulnb"]
+
+[node name="PhysicObject" type="StaticBody2D"]
+
+[node name="Texture" type="Sprite2D" parent="."]
+texture = ExtResource("1_tulnb")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
