@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dld0c5m0atvse"]
+
+[ext_resource type="PackedScene" uid="uid://bjhatax76rj7e" path="res://prefabs/physic_objects/physic_object.tscn" id="1_mqrlu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twmyl"]
+size = Vector2(14, 5)
+
+[node name="Stone1" instance=ExtResource("1_mqrlu")]
+collision_layer = 8
+
+[node name="Texture" parent="." index="0"]
+region_enabled = true
+region_rect = Rect2(0.511314, 1.68821, 14.8644, 13.5266)
+
+[node name="Collision" parent="." index="1"]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_twmyl")
