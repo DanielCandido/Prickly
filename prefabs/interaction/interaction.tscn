@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://c40vt7b4h7nbn"]
+
+[ext_resource type="Script" path="res://prefabs/interaction/interaction.gd" id="1_n533r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgpim"]
+size = Vector2(88, 58)
+
+[node name="Interaction" type="Node2D"]
+script = ExtResource("1_n533r")
+
+[node name="AreaInteraction" type="Area2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="AreaInteraction"]
+shape = SubResource("RectangleShape2D_xgpim")
+
+[node name="Label" type="Label" parent="AreaInteraction"]
+visible = false
+offset_left = -44.0
+offset_top = -87.0
+offset_right = 44.0
+offset_bottom = -70.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+
+[node name="Icon" type="Sprite2D" parent="AreaInteraction/Label"]
+visible = false
+position = Vector2(44, 24)
+scale = Vector2(0.21, 0.21)
+
+[connection signal="body_entered" from="AreaInteraction" to="." method="_on_area_interaction_body_entered"]
+[connection signal="body_exited" from="AreaInteraction" to="." method="_on_area_interaction_body_exited"]

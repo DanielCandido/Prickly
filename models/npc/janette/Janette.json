@@ -1,0 +1,52 @@
+[
+  {
+	"message": "Olá, forasteiro! Parece que você não é daqui. O que o traz a Zantu?",
+	"author": "Janette",
+	"icon_path": "res://assets/characters/profiles/janette.jpg"
+  },
+  {
+	"message": "Olá, Janette. Você está certa, não sou daqui. Estou em busca da prisão de uma das sete divindades do mundo, a Águia Guardiã. Ouvi dizer que há informações aqui que podem me ajudar.",
+	"author": "Player",
+	"icon_path": "res://assets/characters/profiles/butt.jpg"
+  },
+  {
+	"message": "A Águia Guardiã? Essa não é uma tarefa fácil, meu amigo. E as informações podem custar caro. O que está disposto a oferecer em troca?",
+	"author": "Janette",
+	"icon_path": "res://assets/characters/profiles/janette.jpg"
+  },
+  {
+	"message": "Bem, eu tenho algumas moedas de ouro, informações sobre outros lugares que podem interessar aventureiros e talvez até um pouco de ajuda com alguma tarefa que você precise realizar.",
+	"author": "Player",
+	"icon_path": "res://assets/characters/profiles/butt.jpg"
+  },
+  {
+	"message": "Parece que você tem algo interessante para oferecer. Vou te dar uma dica. A prisão da Águia Guardiã fica escondida nas Montanhas Celestiais, a noroeste daqui. Dizem que só pode ser alcançada por aqueles que possuem as penas de uma águia real.",
+	"author": "Janette",
+	"icon_path": "res://assets/characters/profiles/janette.jpg"
+  },
+  {
+	"message": "Penas de uma águia real? Isso não será fácil de conseguir. Alguma outra informação que possa me dar?",
+	"author": "Player",
+	"icon_path": "res://assets/characters/profiles/butt.jpg"
+  },
+  {
+	"message": "Bem, ouvi dizer que um antigo pergaminho com informações sobre a localização da prisão está escondido na biblioteca secreta do Templo da Sabedoria, aqui em Zantu. Mas tenha cuidado, o templo é guardado por monges habilidosos.",
+	"author": "Janette",
+	"icon_path": "res://assets/characters/profiles/janette.jpg"
+  },
+  {
+	"message": "Obrigado, Janette. Suas informações são valiosas. E quanto à taverna, qual é o nome deste lugar?",
+	"author": "Player",
+	"icon_path": "res://assets/characters/profiles/butt.jpg"
+  },
+  {
+	"message": "Este é o DRAGÃO FLAMEJANTE. Se você precisar de mais informações ou um lugar para descansar antes de continuar sua jornada, estaremos aqui. Boa sorte na busca pela Águia Guardiã!",
+	"author": "Janette",
+	"icon_path": "res://assets/characters/profiles/janette.jpg"
+  },
+  {
+	"message": " Obrigado novamente, Janette. Com certeza vou lembrar disso. Adeus por enquanto.",
+	"author": "Player",
+	"icon_path": "res://assets/characters/profiles/butt.jpg"
+  }
+]

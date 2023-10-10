@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw6fc518yqder"]
+
+[ext_resource type="Texture2D" uid="uid://bfxad55sqgf5x" path="res://assets/dialog-bg.png" id="1_ix6rh"]
+[ext_resource type="Script" path="res://prefabs/dialog/dialog.gd" id="1_xqmb6"]
+
+[node name="Dialog" type="CanvasLayer"]
+script = ExtResource("1_xqmb6")
+
+[node name="Bg" type="NinePatchRect" parent="."]
+offset_right = 617.0
+offset_bottom = 210.0
+texture = ExtResource("1_ix6rh")
+
+[node name="Msg" type="RichTextLabel" parent="Bg"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 73.0
+offset_right = 529.0
+offset_bottom = 172.0
+bbcode_enabled = true
+visible_characters = 0
+
+[node name="Author" type="RichTextLabel" parent="Bg"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 17.0
+offset_right = 275.0
+offset_bottom = 55.0
+bbcode_enabled = true
+fit_content = true
+
+[node name="Timer" type="Timer" parent="Bg"]
+wait_time = 0.05
+
+[node name="Profile" type="CanvasModulate" parent="."]
+position = Vector2(6, 0)
+skew = 0.0872665
+
+[node name="Texture" type="TextureRect" parent="Profile"]
+clip_contents = true
+custom_minimum_size = Vector2(14, 14)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 64.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[connection signal="timeout" from="Bg/Timer" to="." method="_on_timer_timeout"]
