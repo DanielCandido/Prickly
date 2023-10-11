@@ -547,3 +547,9 @@ offset_left = 20.0
 offset_top = 17.0
 offset_right = 60.0
 offset_bottom = 40.0
+
+[node name="DayLabel" type="Label" parent="Day"]
+offset_left = 922.0
+offset_top = 33.0
+offset_right = 962.0
+offset_bottom = 56.0
