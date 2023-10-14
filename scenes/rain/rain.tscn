@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://uu6y7u0wl7te"]
+
+[ext_resource type="Script" path="res://scenes/rain/rain.gd" id="1_adtys"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o1x7h"]
+emission_shape = 3
+emission_box_extents = Vector3(800, 1, 1)
+gravity = Vector3(-25, 98, 0)
+scale_min = 2.5
+scale_max = 2.5
+color = Color(0.729412, 0.909804, 1, 1)
+
+[node name="Rain" type="Node2D"]
+script = ExtResource("1_adtys")
+
+[node name="Layer" type="CanvasLayer" parent="."]
+
+[node name="Particles" type="GPUParticles2D" parent="Layer"]
+position = Vector2(587, 0)
+amount = 900
+process_material = SubResource("ParticleProcessMaterial_o1x7h")
+lifetime = 4.0
+speed_scale = 2.0

@@ -15,6 +15,10 @@ run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[aseprite_importers]
+
+aseprite_executable_path="D:/Softwares/Aseprite.v1.3/Aseprite.v1.3/Aseprite.v1.3/Aseprite.exe"
+
 [dotnet]
 
 project/assembly_name="prickly"

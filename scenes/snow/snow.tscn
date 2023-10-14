@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://e3eedx8sskcs"]
+
+[ext_resource type="PackedScene" uid="uid://uu6y7u0wl7te" path="res://scenes/rain/rain.tscn" id="1_xe4ul"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Rain" parent="." instance=ExtResource("1_xe4ul")]

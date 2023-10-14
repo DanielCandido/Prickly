@@ -1,16 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://xh4hnrn0l03h"]
+[gd_scene load_steps=19 format=3 uid="uid://xh4hnrn0l03h"]
 
-[ext_resource type="PackedScene" uid="uid://uo0lp2nh3xd2" path="res://models/character/character.tscn" id="1_f7apm"]
 [ext_resource type="Script" path="res://main.gd" id="1_nsbaa"]
 [ext_resource type="Texture2D" uid="uid://b1qulbem7ei82" path="res://assets/tilesets/forest/Cliff.png" id="3_yb6w7"]
 [ext_resource type="Texture2D" uid="uid://ps1rnpa6iskf" path="res://assets/tilesets/forest/RocksnStumps.png" id="4_y7loj"]
 [ext_resource type="Texture2D" uid="uid://o7aemtmxs2ev" path="res://assets/tilesets/forest/Trees.png" id="5_jbyxg"]
 [ext_resource type="Texture2D" uid="uid://djwpx4n8swi5o" path="res://assets/tilesets/forest/GrassNDirt.png" id="6_107pj"]
+[ext_resource type="PackedScene" uid="uid://c5202ls6hxuf8" path="res://models/player/player.tscn" id="6_o4ep7"]
 [ext_resource type="PackedScene" uid="uid://dca3ke2xdnm5u" path="res://prefabs/drops/potion/potion.tscn" id="7_blo64"]
 [ext_resource type="PackedScene" uid="uid://dld0c5m0atvse" path="res://prefabs/physic_objects/stone_1.tscn" id="8_iftm8"]
 [ext_resource type="PackedScene" uid="uid://yscxs2sovdes" path="res://models/npc/janette/Janette.tscn" id="9_6qf0v"]
 [ext_resource type="PackedScene" uid="uid://bettg2uugt5jo" path="res://prefabs/drops/eagle_key/eagle_key.tscn" id="9_rkawg"]
 [ext_resource type="PackedScene" uid="uid://h3fisrrmtyqp" path="res://scenes/pause/pause.tscn" id="11_tgct4"]
+[ext_resource type="PackedScene" uid="uid://uu6y7u0wl7te" path="res://scenes/rain/rain.tscn" id="12_n21v3"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_yekq2"]
 tile_data = PackedInt32Array(65536, 327685, 2, 131072, 327685, 3, 196608, 327685, 4, 262144, 327685, 5, 1, 393221, 1, 65537, 393221, 2, 131073, 393221, 3, 196609, 393221, 4, 262145, 393221, 5, 2, 458757, 1, 65538, 458757, 2, 131074, 458757, 3, 196610, 458757, 4, 262146, 458757, 5, 327682, 458757, 6, 3, 524293, 1, 65539, 524293, 2, 131075, 524293, 3, 196611, 524293, 4, 262147, 524293, 5, 65540, 589829, 2, 131076, 589829, 3, 196612, 589829, 4)
@@ -493,10 +494,7 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 2
 layer_2/tile_data = PackedInt32Array(65528, 196614, 2, 65529, 196614, 2, 65532, 196614, 2, 65533, 196614, 2)
 
-[node name="Character" parent="." instance=ExtResource("1_f7apm")]
-z_index = 2
-y_sort_enabled = true
-position = Vector2(0, 1)
+[node name="Character" parent="." instance=ExtResource("6_o4ep7")]
 
 [node name="Camera" type="Camera2D" parent="."]
 
@@ -543,13 +541,16 @@ size_flags_vertical = 0
 color = Color(0, 0, 0, 0)
 
 [node name="Hour" type="Label" parent="Day"]
-offset_left = 20.0
-offset_top = 17.0
-offset_right = 60.0
-offset_bottom = 40.0
+offset_left = 21.0
+offset_top = 44.0
+offset_right = 61.0
+offset_bottom = 67.0
 
 [node name="DayLabel" type="Label" parent="Day"]
-offset_left = 922.0
-offset_top = 33.0
-offset_right = 962.0
-offset_bottom = 56.0
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 61.0
+offset_bottom = 40.0
+
+[node name="Rain" parent="." instance=ExtResource("12_n21v3")]
+scale = Vector2(4.5, 4.5)

@@ -15,10 +15,14 @@ enum item_list {
 }
 
 var _inventory_list: Array
+var GOLD_AMOUNT: float = 0.0
 
 func _process(delta):
+	$GoldAmount.text = str(GOLD_AMOUNT)
 	show_inventory()
-	hide_inventory()
+	
+	if Input.is_action_just_pressed("cancel"):
+		hide_inventory()
 	
 
 func send_item(item: Item, amount: int = 1):
@@ -74,16 +78,18 @@ func delete_slot(slot_index: int) -> void:
 	slot.show_button = false
 	
 func hide_inventory():
-	if Input.is_action_just_pressed("cancel"):
-		$bgColor.hide()
-		$Container.hide()
-		ProjectSettings.set_setting("inventory_is_opened", false)
+	self.visible = false
+	ProjectSettings.set_setting("inventory_is_opened", false)
 
 func show_inventory():
 	if Input.is_action_just_pressed("inventory"):
-		$bgColor.show()
-		$Container.show()
+		if ProjectSettings.get_setting("inventory_is_opened") == true:
+			hide_inventory()
+			return
+			
+		self.visible = true
 		ProjectSettings.set_setting("inventory_is_opened", true)
+		
 
 func _on_visibility_changed():
 	print("Changed visibility " + str(self.visible))
