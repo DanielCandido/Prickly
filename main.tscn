@@ -494,8 +494,6 @@ layer_2/y_sort_origin = 0
 layer_2/z_index = 2
 layer_2/tile_data = PackedInt32Array(65528, 196614, 2, 65529, 196614, 2, 65532, 196614, 2, 65533, 196614, 2)
 
-[node name="Character" parent="." instance=ExtResource("6_o4ep7")]
-
 [node name="Camera" type="Camera2D" parent="."]
 
 [node name="Objects" type="Node2D" parent="."]
@@ -554,3 +552,5 @@ offset_bottom = 40.0
 
 [node name="Rain" parent="." instance=ExtResource("12_n21v3")]
 scale = Vector2(4.5, 4.5)
+
+[node name="Character" parent="." instance=ExtResource("6_o4ep7")]
