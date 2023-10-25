@@ -12,11 +12,11 @@ var velocity_rain = 0
 var is_rain = false
 
 var count_sec = 0.0
-var hour = 23
+var hour = 8
 var minutes = 24
 var time = 0.0
 var day = 1
-var current_color = Color(0.0, 0.0, 0.0, 0.8)
+var current_color = Color(0.0, 0.0, 0.0, 0.0)
 
 func _ready():
 	player._follow_camera(camera)
@@ -25,6 +25,7 @@ func _ready():
 	$Day/Hour.text = timestamp
 	$Day/Color.color = current_color
 	$Day/DayLabel.text = "Dia: " + str(day)
+	_control_day()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

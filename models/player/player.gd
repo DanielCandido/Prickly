@@ -50,8 +50,8 @@ func _move():
 	move_and_slide()
 	
 func _state(dir: Vector2):
-	_animation_tree["parameters/walk/blend_position"].x = dir.x
-	_animation_tree["parameters/walk/blend_position"].y = dir.y
+#	_animation_tree["parameters/walk/blend_position"].x = dir.x
+#	_animation_tree["parameters/walk/blend_position"].y = dir.y
 	_animation_tree["parameters/idle/blend_position"].x = last_direction.x
 	_animation_tree["parameters/idle/blend_position"].y = last_direction.y
 	
@@ -62,8 +62,8 @@ func _follow_camera(camera):
 	
 
 func _animated():
-	if velocity != Vector2.ZERO:
-		_state_machine.travel("walk")
-		return
+#	if velocity != Vector2.ZERO:
+#		_state_machine.travel("walk")
+#		return
 		
 	_state_machine.travel("idle")

@@ -78,11 +78,13 @@ func delete_slot(slot_index: int) -> void:
 	slot.show_button = false
 	
 func hide_inventory():
+	owner.set_physics_process(true)
 	self.visible = false
 	ProjectSettings.set_setting("inventory_is_opened", false)
 
 func show_inventory():
 	if Input.is_action_just_pressed("inventory"):
+		owner.set_physics_process(false)
 		if ProjectSettings.get_setting("inventory_is_opened") == true:
 			hide_inventory()
 			return

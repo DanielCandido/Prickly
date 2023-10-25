@@ -3,9 +3,10 @@
 [ext_resource type="Script" path="res://prefabs/inventory/inventory.gd" id="1_ot241"]
 [ext_resource type="PackedScene" uid="uid://celksweh11svb" path="res://prefabs/inventory/slot_inventory.tscn" id="2_vdhty"]
 
-[node name="Inventory" type="CanvasLayer"]
+[node name="Inventory" type="Node2D"]
+process_mode = 3
 visible = false
-follow_viewport_enabled = true
+z_index = 20
 script = ExtResource("1_ot241")
 
 [node name="Container" type="GridContainer" parent="."]
